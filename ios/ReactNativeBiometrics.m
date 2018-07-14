@@ -68,8 +68,6 @@ RCT_EXPORT_METHOD(createKeys: (NSString *)promptMessage resolver:(RCTPromiseReso
           NSString *message = [NSString stringWithFormat:@"Key generation error: %@", gen_error];
           reject(@"storage_error", message, nil);
         }
-      } else {
-        reject(@"fingerprint_error", @"Could not confirm fingerprint", nil);
       }
     }];
   });
